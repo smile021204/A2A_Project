@@ -87,7 +87,6 @@ PyMuPDF
 
 *Note: For optimal performance, you may want to install a CUDA-enabled version of PyTorch by following the instructions on the [official PyTorch website](https://pytorch.org/get-started/locally/).*
 
-\</details\>
 
 ## ▶️ How to Run
 
