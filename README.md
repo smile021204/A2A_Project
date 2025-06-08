@@ -1,18 +1,12 @@
 # A2A: Academic Paper Summarization
 
-\<div align="center"\>
 
 **Your AI-powered research assistant for discovering, summarizing, and reviewing academic papers.**
 
-\</div\>
+
 
 > A fully autonomous, AI-driven workflow that fetches papers from arXiv, uses local Large Language Models for summarization and quality review, and presents the results in a clean, interactive web UI.
 
-\<br\>
-
-\<p align="center"\>
-\<img src="[의심스러운 링크 삭제됨]" alt="Application Screenshot" width="800"/\>
-\</p\>
 
 ## ✨ Core Features
 
@@ -26,7 +20,7 @@
 
 This project uses a microservice architecture. The Gradio UI communicates via REST API to a FastAPI Coordinator, which then orchestrates the workflow by calling the various worker agents using JSON-RPC.
 
-```mermaid
+```
 graph TD
     A[User via Browser] --> B(🖼️ Gradio UI);
     B -->|REST API (HTTP)| C{⚙️ Coordinator (FastAPI)};
