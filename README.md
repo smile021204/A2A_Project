@@ -62,6 +62,7 @@ cd your-repository-name
 python -m venv venv
 # On Windows:
 # venv\Scripts\activate
+
 # On macOS/Linux:
 # source venv/bin/activate
 
@@ -69,8 +70,6 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-\<details\>
-\<summary\>Click to view \<strong\>requirements.txt\</strong\>\</summary\>
 
 ```text
 fastapi
