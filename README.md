@@ -224,7 +224,7 @@ Based on user testing with 50+ researchers:
 
 The system employs a microservice architecture where each component operates independently. The Gradio UI communicates via REST API to a FastAPI Coordinator, which orchestrates the workflow by calling various worker agents.
 
-```mermaid
+```
 graph TD
     A[User via Browser] --> B(🖼️ Gradio UI);
     B -->|REST API (HTTP)| C{⚙️ Coordinator (FastAPI)};
@@ -294,16 +294,28 @@ pydantic
 
 ## ▶️ How to Run
 
-The application requires **4 separate terminal windows** to run all microservices:
+### Quick Start (Recommended)
+For easy setup, use the automated script:
+```bash
+# Start all microservices
+./run_all.sh
+
+# Open a new terminal and run the Gradio interface
+python assets/Gradio.py
+```
+
+### Manual Setup
+The application requires **5 separate terminal windows** to run all microservices:
 
 | Step | Terminal | Service | Command | Port | Purpose |
 |------|----------|---------|---------|------|---------|
 | 1 | Terminal 1 | **Fetcher Agent** | `uvicorn fetcher_agent:app --host 127.0.0.1 --port 8001` | 8001 | Paper search and download |
 | 2 | Terminal 2 | **Summarizer Agent** | `uvicorn summarizer_agent:app --host 127.0.0.1 --port 8002` | 8002 | Text summarization |
 | 3 | Terminal 3 | **Reviewer Agent** | `uvicorn reviewer_agent:app --host 127.0.0.1 --port 8003` | 8003 | Summary quality review |
-| 4 | Terminal 4 | **Coordinator + UI** | `uvicorn coordinator:app --host 127.0.0.1 --port 8000` | 8000 | Service coordination and UI |
+| 4 | Terminal 4 | **Coordinator Agent** | `uvicorn coordinator:app --host 127.0.0.1 --port 8000` | 8000 | Service coordination and UI |
+| 5 | Terminal 5 | **Gradio Interface** | `python assets/Gradio.py` | - | Web UI |
 
-After starting all services, navigate to `http://127.0.0.1:8000` in your web browser.
+After starting all services, navigate to the `Gradio Webserver` URL shown in the terminal in your web browser.
 
 ## 📂 Project Structure
 
