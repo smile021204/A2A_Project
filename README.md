@@ -309,14 +309,15 @@ After starting all services, navigate to `http://127.0.0.1:8000` in your web bro
 
 ```
 a2a-project/
-├── 📄 coordinator.py          # FastAPI coordinator and Gradio UI
+├── 📄 coordinator.py          # FastAPI coordinator
 ├── 📄 fetcher_agent.py        # Paper fetching service
 ├── 📄 summarizer_agent.py     # Text summarization service  
 ├── 📄 reviewer_agent.py       # Summary review service
 ├── 📄 requirements.txt        # Python dependencies
 ├── 📄 README.md              # Project documentation
-└── 📁 assets/                # Static assets and resources
-    └── 📁 papers/            # Downloaded papers cache
+├── 📁 assets/                # Static assets and resources
+    └── 📄 Gradio.py         # Main UI gradio web dev python file
+└── 📁 downloaded_papers/            # Downloaded papers cache
 ```
 
 ## 🔧 Configuration
