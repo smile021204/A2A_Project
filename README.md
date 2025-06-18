@@ -146,7 +146,7 @@ This project was developed with significant assistance from AI tools, demonstrat
 - **API Documentation**: Auto-generated OpenAPI documentation with detailed endpoint descriptions
 - **Logging and Monitoring**: Structured logging for debugging and performance monitorin
 
-## Technology Specifications
+## Technical Specifications
 
 ### Large Language Models (LLMs)
 
